@@ -1,0 +1,232 @@
+/*
+ * layout/grid
+ */
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+$class-slug: grid !default;
+$grid-columns: $standard-grid;
+$gc: $grid-columns;
+
+@for $gc from 1 through $grid-columns {
+
+    @for $i from 1 through $gc {
+
+        $val:  $i / $gc;
+
+        @include respond-to('XS') { 
+            // half
+            @if $val <= .5 {
+                .#{$class-slug}-#{$i}-#{$gc} {  
+                    width: 50%;
+                }
+            }
+            // whole
+            @if $val > .5 {
+                .#{$class-slug}-#{$i}-#{$gc} {  
+                    width: 100%;
+                }
+            }
+        }
+
+        @include respond-to('SM') { 
+            // quarter
+            @if $val <= .25 {
+                .#{$class-slug}-#{$i}-#{$gc} {  
+                    width: 25%;
+                }
+            }
+            // half
+            @if $val <= .5 and $val > .25 {
+                .#{$class-slug}-#{$i}-#{$gc} {  
+                    width: 50%;
+                }
+            }
+            // 3 quarters
+            @if $val > .5 and $val <= .75 {
+                .#{$class-slug}-#{$i}-#{$gc} {  
+                    width: 75%;
+                }
+            }
+            // whole
+            @if $val > .75 and $val <= .1 {
+                .#{$class-slug}-#{$i}-#{$gc} {  
+                    width: 100%;
+                }
+            }
+        }
+
+        @include respond-to('MD') {
+            // quarter
+            @if $val <= .25 {
+                .#{$class-slug}-#{$i}-#{$gc} {  
+                    width: 25%;
+                }
+            }
+            // third
+            @if $val <= .3333333 and $val > .25 {
+                .#{$class-slug}-#{$i}-#{$gc} {  
+                    width: 33.33333%;
+                }
+            }
+            // half
+            @if $val <= .5 and $val > .3333333 {
+                .#{$class-slug}-#{$i}-#{$gc} {  
+                    width: 50%;
+                }
+            }
+            // 2 thirds
+            @if $val <= .6666667 and $val > .5 {
+                .#{$class-slug}-#{$i}-#{$gc} {  
+                    width: 66.66667%;
+                }
+            }
+            // 3 quarters
+            @if $val > .6666667 and $val <= .75 {
+                .#{$class-slug}-#{$i}-#{$gc} {  
+                    width: 75%;
+                }
+            }
+            // whole
+            @if $val > .75 and $val <= .1 {
+                .#{$class-slug}-#{$i}-#{$gc} {  
+                    width: 100%;
+                }
+            }
+        }
+
+        @include respond-to('LG') {
+
+            .#{$class-slug}-#{$i}-#{$gc} {  
+                width: percentage($val);
+            }
+
+        }
+
+        @include respond-to('XL') {
+
+            .#{$class-slug}-#{$i}-#{$gc} {  
+                width: percentage($val);
+            }
+
+        }
+
+    }
+
+}
+
+@include respond-to('XS') {
+    .grid {
+        &-container {
+            &-col {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            &-row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+        &__fixed-width {
+            width: calc(100% - 10px);
+            max-width: 375px;
+            margin: 0;
+            padding: 0 5px;
+        }
+    }
+}
+// supports 4, even #rd - columns
+@include respond-to('SM') {
+    .grid {
+        &-container {
+            &-col {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            &-row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+        &__fixed-width {
+            width: calc(100% - 30px);
+            margin: 0;
+            padding: 0 15px;
+        }
+    }
+}
+// supports 8 columns
+@include respond-to('MD') {
+    .grid {
+        &-container {
+            &-col {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            &-row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+        &__fixed-width {
+            width: calc(100% - 60px);
+            margin: 0 10px;
+            padding: 0 20px;
+        }
+    }
+}
+// supports 12, odd & even #rd - columns
+@include respond-to('LG') {
+    .grid {
+        &-container {
+            &-col {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            &-row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+        &__fixed-width {
+            width: calc(100% - 80px);
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+    }
+}
+@include respond-to('XL') {
+    .grid {
+        &-container {
+            &-col {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            &-row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+        &__fixed-width {
+            width: calc(100% - 80px);
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+    }
+}
+
+.grid-wrap {
+    flex-wrap: wrap;
+}
