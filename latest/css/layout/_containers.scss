@@ -1,0 +1,20 @@
+/*
+ * layout/containers
+ */
+// @import "../abstracts/mixins";
+body { margin: 0; }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+// standard width containers
+/* .container {
+    @include respond-to('XS') {}
+    @include respond-to('SM') {}
+    @include respond-to('MD') {}
+    @include respond-to('LG') {}
+    @include respond-to('XL') {}
+} */

@@ -2,3 +2,16 @@
 *.css.map
 *.sass.map
 *.scss.map
+
+# local development
+frn-base/
+latest/css/themes/frn.css
+latest/css/themes/frn.scss
+latest/css/themes/frn.min.css
+latest/css/platforms/wp-slate.css
+latest/css/platforms/wp-slate.scss
+latest/css/platforms/wp-slate.min.css
+
+.DS_Store
+*.zip
+*.html

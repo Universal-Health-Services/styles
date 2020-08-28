@@ -1,0 +1,42 @@
+/* 
+ * Mixins
+ * ==========
+ * breakpoints - map of screen size key & value pairs
+ * respond-to - manage responsive rules
+ * clearfix
+ * fontface
+ */
+/*
+ * Define media breakpoints map
+ */
+/*
+ * @access public
+ * @param {String} $breakpoint - Breakpoint
+ * @requires $breakpoints
+ */
+/*
+ * Helper to clear inner floats
+ * @author Nicolas Gallagher
+ * @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
+ */
+/*
+ * @font-face mixin
+ * Bulletproof font-face via Font Squirrel
+ * @include fontface('family', 'assets/fonts/', 'myfontname');
+ */
+/*
+@mixin fontface($font-family, $font-url, $font-name) {
+	@font-face {
+		font: {
+			family: $font-family;
+			style: normal;
+			weight: normal;
+		}
+		src: url($font-url + '/' + $font-name + '.eot');
+		src: url($font-url + '/' + $font-name + '.eot#iefix') format('embedded-opentype'),
+			 url($font-url + '/' + $font-name + '.woff') format('woff'),
+			 url($font-url + '/' + $font-name + '.ttf')  format('truetype'),
+			 url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
+	}
+}
+*/

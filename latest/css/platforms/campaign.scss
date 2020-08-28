@@ -1,0 +1,705 @@
+/*
+ * Campaign Landing Page Builder
+ * ==========
+ * platforms/campaign
+ */
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+// Fonts, see individule theme files
+
+/* 
+ * CONGO (congo)
+ * Service Line Campaigns
+ */
+// support two size variations
+.congo.armc,
+.congo.gwuh,
+.congo.lrmc,
+.congo.mmhs,
+.congo.nnmc,
+.congo.nwths,
+.congo.sths,
+.congo.swhs,
+.congo.vhs,
+.congo.wrmc {
+  header .logo {
+    width: 300px;
+    height: auto;
+  }
+}  
+.congo.crmc,
+.congo.dhl,
+.congo.fdmc,
+.congo.mmh,
+.congo.prmc,
+.congo.stm,
+.congo.tmc,
+.congo.tvh {
+  header .logo {
+    width: auto;
+    height: 68px;
+  }
+}
+// platform styles & default colors
+.congo {
+
+  // Header
+  header {
+
+    .grid-container-row.grid__fixed-width {
+      @include respond-to('XS') {
+        padding: 20px 5px;
+        .grid-1-3,
+        .grid-2-3 {
+          width: 100%;
+          height: 65px;
+        }
+        .branding {
+          text-align: center;
+          margin-bottom: 5px;
+        }
+        .cta {
+          align-items: center;
+          margin-top: 5px;
+        }
+      }
+      @include respond-to('SM') {
+        padding: 20px 15px;
+        .grid-1-3,
+        .grid-2-3 {
+          width: 100%;
+          height: 65px;
+        }
+        .branding {
+          text-align: center;
+          margin-bottom: 5px;
+        }
+        .cta {
+          align-items: center;
+          margin-top: 5px;
+        }
+      }
+      @include respond-to('MD') {
+        padding: 20px 0;
+        .grid-1-3,
+        .grid-2-3 {
+          width: 50%;
+          height: 65px;
+          margin: 0;
+        }
+        .branding {
+          text-align: left;
+        }
+      }
+    }
+
+    .header-tagline {
+      font-size: 24px;
+      line-height: 1.1;
+      text-align: center;
+      margin: 0;
+      // default color
+      color: darken( $mono, 20% );
+    }
+    a.phone {
+      font-size: 35px;
+      line-height: 1;
+      text-align: center;
+      margin: 0;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  // Hero
+  .hero {
+    // default color
+    background: $white;
+    .hero-copy {
+      justify-content: center;
+    }
+    @include respond-to('XS') {
+      background-position: right top;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      padding: 0;
+      .grid-container-row.grid__fixed-width {
+        background-color: rgba(255,255,255,.7);
+      }
+      .hero-copy {
+        padding: 75px 16px 25px;
+        width: 100%;
+      }
+    }
+    @include respond-to('SM') {
+      background-position: right top;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      padding: 0;
+      .grid-container-row.grid__fixed-width {
+        background-color: rgba(255,255,255,.7);
+        width: 100%;
+        margin: 0;
+        padding: 30px 0;
+      }
+      .hero-copy {
+        padding: 75px 16px 25px;
+        width: 100%;
+      }
+    }
+    @include respond-to('MD') {
+      padding: 0;
+      .grid-container-row.grid__fixed-width {
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
+      .hero-copy {
+        padding: 0 16px;
+      }
+    }
+    @include respond-to('LG') {
+      padding-top: 250px;
+      padding-bottom: 50px;
+      .grid-container-row.grid__fixed-width {
+        background-color: rgba(255,255,255,.0);
+        width: calc(100% - 80px);
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 40px;
+
+      }
+      .hero-copy {
+        width: auto;
+      }
+    }
+    @include respond-to('XL'){
+      .grid-container-row.grid__fixed-width {
+        max-width: 1180px;
+      }
+    }
+    .hero-copy:first-of-type h1,
+    .hero-copy:first-of-type p {
+      text-align: center;
+    }
+    .hero-copy:first-of-type h1 {
+      margin: 20px auto 10px;
+    }
+    .hero-copy:first-of-type p {
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.3;
+      margin: 10px auto 20px;
+      // default color
+      color: darken( $mono, 20% );
+    }
+    a.button {
+      padding: 18px 30px 15px;
+      border-radius: 2px;
+      // colors in theme file
+      text-align: center;
+      text-decoration: none;
+      margin: 20px auto 45px;
+      // &:hover, colors in theme file
+    }
+    a.button span {
+      margin-top: 5px;
+      font-size: 1.5rem;
+      font-weight: 400;
+      // colors in theme file
+    }
+  }
+
+  // Containers & Wrappers
+  .content-container {
+    padding: 45px 0;
+  }
+  .copy-container {
+    @include respond-to('XS') {
+      width: 100%;
+      margin-bottom: 40px;
+      h2 {
+        margin-top: 0;
+      }
+    }
+    @include respond-to('SM') {
+      width: 100%;
+      margin-bottom: 40px;
+      h2 {
+        margin-top: 0;
+      }
+    }
+    @include respond-to('LG') {
+      width: 50%;
+      h2 {
+        margin-top: 15px;
+      }
+    }
+  }
+  .copy-container,
+  .form-container {
+    padding: 0 20px;
+  }
+
+  // Form
+  .form-container {
+    @include respond-to('XS') {
+      border-radius: 0;
+      width: 100%;
+      h3 {
+        margin-top: 30px;
+      }
+    }
+    @include respond-to('SM') {
+      border-radius: 3px;
+      width: 100%;
+      h3 {
+        margin-top: 30px;
+      }
+    }
+    @include respond-to('LG') {
+      width: 50%;
+    }
+  }
+  .form-wrapper {
+    p {
+      margin: 10px 0;
+    }
+    input[type=email],
+    input[type=tel], 
+    input[type=text] {
+      padding: 8px 16px;
+      box-sizing: border-box;
+      border: 1px solid $white;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-transform: inherit;
+      border-radius: 3px;
+      height: 45px;
+      @include respond-to('XS') {
+        width: 100%;
+        margin-top: 8px;
+      }
+      @include respond-to('SM') {
+        width: 100%;
+        margin-top: 8px;
+      }
+      @include respond-to('MD') {
+        width: calc(50% - 8px);
+        &:first-of-type {
+          margin: 8px 8px 8px 0;
+        }
+        &:last-of-type {
+          margin: 8px 0 8px 8px;
+        }
+      }
+    }
+    input[type=checkbox],
+    input[type=radio] {
+      width: 20px;
+      height: 20px;
+      border: 1px solid $white;
+    }
+    input[type=radio] {
+      background-color: initial;
+      cursor: default;
+      appearance: radio;
+      box-sizing: border-box;
+      margin: 3px 3px 0px 5px;
+      margin-top: 3px;
+      margin-right: 3px;
+      margin-bottom: 0px;
+      margin-left: 5px;
+      padding: initial;
+      padding-top: initial;
+      padding-right: initial;
+      padding-bottom: initial;
+      padding-left: initial;
+    }
+    label {
+      display: block;
+      padding: 10px 0;
+    }
+    button[type=submit] {
+      width: 100%;
+      padding: 8px 16px;
+      margin: 8px 0 30px;
+      box-sizing: border-box;
+      border: 1px solid $white;
+      border-radius: 3px;
+    }
+  }
+
+  // Teasers
+  .teasers {
+    .teaser {
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 3px;
+      }
+      .grid-container-col {
+        margin: 30px 0;
+      }
+      h3,
+      p {
+        padding: 0 20px;
+        margin: 0;
+      }
+      ul {
+        margin: 10px;
+      }
+    }
+    // grid 1-3
+    .teaser.grid-1-3 {
+      @include respond-to('XS') {
+        width: 100%;
+        padding: 0;
+        img {
+          border-radius: 0;
+        }
+        &:first-of-type,
+        &:last-of-type {
+          width: 100%;
+          padding: 0;
+        }
+      }
+      @include respond-to('SM') {
+        width: 100%;
+        padding: 0;
+        img {
+          border-radius: 3px;
+        }
+        &:first-of-type,
+        &:last-of-type {
+          width: 100%;
+          padding: 0;
+        }
+      }
+      @include respond-to('MD') {
+        width: calc(50% - 15px);
+        padding: 0 15px 0 0;
+        &:first-of-type {
+          width: 100%;
+          padding: 0;
+          margin-bottom: 30px;
+        }
+        &:last-of-type {
+          width: calc(50% - 15px);
+          padding: 0 0 0 15px;
+        }
+      }
+      @include respond-to('LG') {
+        width: calc(33.333% - 20px);
+        padding: 0 10px;
+        margin: 0;
+        &:first-of-type {
+          width: calc(33.333% - 20px);
+          padding: 0 20px 0 0;
+          margin: 0;
+        }
+        &:last-of-type {
+          width: calc(33.333% - 20px);
+          padding: 0 0 0 20px;
+          margin: 0;
+        }
+      }
+    }
+    // grid 1-2
+    .teaser.grid-1-2 {
+      @include respond-to('XS') {
+        width: 100%;
+        padding: 0;
+        img {
+          border-radius: 0;
+        }
+        &:first-of-type,
+        &:last-of-type {
+          width: 100%;
+          padding: 0;
+        }
+      }
+      @include respond-to('SM') {
+          img {
+            border-radius: 3px;
+          }
+          &:first-of-type,
+          &:last-of-type {
+            width: 100%;
+            padding: 0;
+        }
+      }
+      @include respond-to('MD') {
+        &:first-of-type {
+          width: calc(50% - 15px);
+          padding: 0 15px 0 0;
+        }
+        &:last-of-type {
+          width: calc(50% - 15px);
+          padding: 0 0 0 15px;
+        }
+      }
+    }
+    // grid 1-1
+    .teaser.grid-1-1 {
+      // default color
+      background-color: lighten( $mono, 45% );
+      border-radius: 3px;
+      img {
+        height: auto;
+        margin: 0;
+      } 
+      @include respond-to('XS') {
+        img {
+          width: 100%;
+          border-radius: 0;
+        }
+      }
+      @include respond-to('SM') {
+        img {
+          width: 100%;
+          border-radius: 3px 3px 0 0;
+        }
+      }
+      @include respond-to('MD') {
+        h3,
+        p {
+          padding: 0 30px;
+          margin: 0;
+        }
+        ul {
+          margin: 20px;
+        }
+      }
+      @include respond-to('LG') {
+        img {
+          width: 66.666%;
+          height: auto;
+          border-radius: 3px 0 0 3px;
+        }
+        .grid-container-col {
+          margin: 40px 0;
+        }
+        h3,
+        p {
+          padding: 0 20px;
+        }
+        ul {
+          margin: 10px;
+        }
+      }
+    }
+  }
+
+  // Awards
+  .awards {
+    @include respond-to('XS') {
+      width: calc(100% - 10px);
+      margin: 0;
+      padding: 5px;
+      .award {
+        padding: 0 10px;
+        margin: 0 0 15px;
+      }
+    }
+    @include respond-to('SM') {
+      width: calc(100% - 30px);
+      margin: 0;
+      padding: 15px;
+      .award {
+        padding: 0 15px;
+        margin: 0 0 30px;
+      }
+    }
+    .awarded-by h4.award-text,
+    .awarded-by h4.award-text_no-subtext {
+      font-size: 36px;
+      font-weight: 400;
+      text-align: center;
+    }
+    .awarded-by h4.award-text {
+      line-height: 34px;
+      margin: 20px 0 5px;
+    }
+    .awarded-by h4.award-text_no-subtext {
+      margin: 20px 0 20px;
+    }
+    .awarded-by p.award-subtext {
+      text-align: center;
+      line-height: 20px;
+      margin: 5px 0 5px;
+    }
+    // default colors
+    background-color: lighten( $mono, 45% );
+    .awarded-by h4.award-text,
+    .awarded-by h4.award-text_no-subtext,
+    .awarded-by p.award-subtext {
+        color: darken( $mono, 20% );
+    }
+  }
+  .award,
+  .awarded-by,
+  .awarded-by-seal {
+    justify-content: center;
+    align-items: center;
+  }
+
+  // CTAs 
+  .call-ribbon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 30px 0;
+    margin: 0 0 40px 0;
+    .cta {
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+    }
+    h3, a {
+      font-size: 36px;
+      text-align: center;
+      line-height: 34px;
+      font-weight: 400;
+      letter-spacing: 0;
+      font-style: normal;
+      text-decoration: none;
+      margin: 20px 0;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Locations
+  .locations-map {
+    margin-bottom: 40px;
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 0;
+      border-radius: 3px;
+    }
+  }
+
+  .location-addr {
+    h4, p {
+      padding: 0;
+      margin: 0 0 20px;
+    }
+    p {
+      line-height: 1.15;
+      font-weight: 400;
+      font-size: 20px;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Footer
+  footer {
+    padding: 45px 0;
+    margin: 40px 0 0;
+    @include respond-to('XS') {
+      .grid-1-6 {
+        width: 100%;
+      }
+      .grid-5-6 {
+        width: 100%;
+      }
+      img.logo {
+        width: 101px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+    }
+    @include respond-to('SM') {
+      .grid-1-6 {
+        width: 100%;
+      }
+      .grid-5-6 {
+        width: 100%;
+      }
+      img.logo {
+        width: 101px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+    }
+    @include respond-to('MD') {
+      .grid-1-6 {
+        width: 25%;
+      }
+      .grid-5-6 {
+        width: 75%;
+      }
+      img.logo {
+        width: 101px;
+        height: auto;
+      }
+      p:first-of-type {
+        margin-top: 0;
+      }
+    }
+    @include respond-to('LG') {
+      .grid-1-6 {
+        width: 16.66667%;
+      }
+      .grid-5-6 {
+        width: 83.33333%;
+      }
+      p {
+        margin: 0 0 20px;
+      }
+      p.copyright {
+        margin-top: 45px;
+      }
+    }
+  }
+
+  // Responsive Grid
+  // force full-width
+  .grid__fixed-width.copy-form_wrapper,
+  .grid__fixed-width.teasers {
+    @include respond-to('XS') {
+      width: 100%;
+      max-width: 375px;
+      margin: 0;
+      padding: 0;
+    }
+    @include respond-to('SM') {
+      width: calc(100% - 30px);
+      margin: 0;
+      padding: 0 15px;
+    }
+    @include respond-to('MD') {
+      width: calc(100% - 60px);
+      margin: 0 10px;
+      padding: 0 20px;
+    }
+    @include respond-to('LG') {
+      width: calc(100% - 80px);
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    @include respond-to('XL') {
+      width: calc(100% - 80px);
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+  }
+}

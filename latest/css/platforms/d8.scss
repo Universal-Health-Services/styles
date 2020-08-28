@@ -1,0 +1,31 @@
+/*
+ * Drupal 8 (d8)
+ * ==========
+ * platforms/d8
+ */
+ @import "../abstracts/mixins";
+
+// TODO:
+// min-width: 1366px &
+// min-width: 1024px HERO_d suggested
+
+ /* 
+ .container {
+    body.d8 & {
+        // @include respond-to('XS') { }
+        // @include respond-to('SM') { }
+        // @include respond-to('MD') { }
+        // @include respond-to('LG') { }
+        // @include respond-to('XL') { }
+     }
+ }
+ header .container {
+    body.d8 & {
+        // @include respond-to('XS') { }
+        // @include respond-to('SM') { }
+        // @include respond-to('MD') { }
+        // @include respond-to('LG') { }
+        // @include respond-to('XL') { }
+    }
+ }
+ */

@@ -1,0 +1,73 @@
+/*
+ * layout/sidebar
+ */
+/* 
+ * Mixins
+ * ==========
+ * breakpoints - map of screen size key & value pairs
+ * respond-to - manage responsive rules
+ * clearfix
+ * fontface
+ */
+/*
+ * Define media breakpoints map
+ * ==========
+ * TODO:
+ * min-width: 1366px &
+ * min-width: 1024px HERO_d suggested
+ */
+/*
+ * @font-face mixin
+ * Bulletproof font-face via Font Squirrel
+ * @include fontface('family', 'assets/fonts/', 'myfontname');
+ */
+.sidebar.sticky {
+  display: flex;
+  position: fixed;
+  overflow: hidden;
+}
+
+@media (max-width: 375px) {
+  .sidebar.sticky {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 376px) {
+  .sidebar.sticky {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 576px) {
+  .sidebar.sticky {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 961px) {
+  .sidebar.sticky {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1181px) {
+  .sidebar.sticky {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+.sidebar.sticky[data-sticky="left"] {
+  top: 0;
+  left: 0;
+}
+
+.sidebar.sticky[data-sticky="right"] {
+  top: 0;
+  right: 0;
+}

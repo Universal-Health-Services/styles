@@ -1,0 +1,20 @@
+/*
+ * layout/containers
+ */
+body {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+/* .container {
+    @include respond-to('XS') {}
+    @include respond-to('SM') {}
+    @include respond-to('MD') {}
+    @include respond-to('LG') {}
+    @include respond-to('XL') {}
+} */

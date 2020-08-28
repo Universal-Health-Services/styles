@@ -1,0 +1,79 @@
+/*
+ * Drupal 7 (d7)
+ * ==========
+ * pages/d7
+ */
+ @import "../abstracts/mixins";
+ 
+// TODO:
+// min-width: 1366px &
+// min-width: 1024px HERO_d suggested
+
+.container {
+    body.d7 & {
+        // Grid
+        @include respond-to('XS') {
+            min-width: 375px;
+            padding: 0 20px;
+            margin: 0 20px;
+        }
+        @include respond-to('SM') { 
+            max-width: 575px;
+            padding: 0 20px;
+            margin: 0 20px;
+        }
+        @include respond-to('MD') { 
+            max-width: 960px;
+            padding: 40px 0;
+            margin: 0 auto;
+        }
+        @include respond-to('LG') {
+            max-width: 1180px;
+            padding: 40px 0;
+            margin: 0 auto;
+        }
+        @include respond-to('XL') {
+            max-width: 1300px;
+            padding: 40px 0;
+            margin: 0 auto;
+        }
+    }
+}
+header .container {
+    body.d7 & {
+        @include respond-to('XS') {
+            min-width: 375px;
+            padding: 0 20px;
+            margin: 0 20px;
+        }
+        @include respond-to('SM') { 
+            max-width: 575px;
+            padding: 0 20px;
+            padding: 0 10px;
+            margin: 0 20px;
+        }
+        @include respond-to('MD') { 
+            max-width: 960px;
+            padding: 0 10px;
+            margin: 0 auto;
+        }
+        @include respond-to('LG') {
+            max-width: 1180px;
+            padding: 0 10px;
+            margin: 0 auto;
+        }
+        @include respond-to('XL') {
+            max-width: 1300px;
+            padding: 0 10px;
+            margin: 0 auto;
+        }
+    }
+}
+
+// standard logo
+a.header_logo > img {
+    body.standard & {
+        width: 285px;
+        height: 57px;
+    }
+}

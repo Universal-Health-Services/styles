@@ -1,0 +1,42 @@
+/*
+ * layout/sidebar
+ */
+ @import "../abstracts/mixins";
+
+ .sidebar {
+    &.sticky {
+        display: flex;
+        position: fixed;
+        //width: 24.2rem;
+        //padding: 2.4rem 0;
+        overflow: hidden;
+        @include respond-to('XS') {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        @include respond-to('SM') {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        @include respond-to('MD') {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        @include respond-to('LG') {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        @include respond-to('XL') {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        &[data-sticky="left"] {
+            top: 0;
+            left: 0;
+        }
+        &[data-sticky="right"] {
+            top: 0;
+            right: 0;
+        }
+    }
+}
