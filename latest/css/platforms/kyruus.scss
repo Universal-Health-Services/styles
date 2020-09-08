@@ -46,6 +46,8 @@
     // Header
     header {
 
+        border-bottom: 1px solid rgba(0,0,0,.12);
+
         @include respond-to('LG') {
             
             // d7 - replace default
@@ -57,31 +59,17 @@
             }
         }
 
-        .util-nav_wrapper {
-            //padding: 1.25rem 0;
-            background-color: #3c475a;
-        }
-
-        ul.util-nav {
-
-            li {
-                display: inline-block;
-                position: relative;
-                margin: 0 .625rem;
-                .search { margin-right: auto; }
-                .phone { margin-left: auto; }
-                &:first-child {
-                    margin-left: 0;
-                }
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-        }
-
         .main-nav_wrapper {
             padding: 0;
             background-color: $white;
+        }
+
+        .return_wrapper {
+            margin: auto 0;
+
+        }
+        .return {
+            text-align: right;
         }
 
         .logo {
@@ -138,12 +126,14 @@
                 overflow: hidden;
             }
 
-/*          .grid-1-6 {
+            /*
+            .grid-1-6 {
                 width: 16.66667%;
             }
             .grid-5-6 {
                 width: 83.33333%;
-            } */
+            } 
+            */
 
             .location {
                 margin-top: 0;
@@ -162,8 +152,9 @@
                 &::before {
                     display: block;
                     content: ' ';
-                    // '../../assets/location-sharp.svg' 
-                    background-image: url('https://min.gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/location-sharp.svg');
+                    // '../../assets/location-sharp.svg' local
+                    // 'https://min.gitcdn.link/..' fix SVG and pull from CDN
+                    background-image: url('https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/location-sharp.svg');
                     background-size: 20px 20px;
                     opacity: .75;
                     margin-top: .35rem;
@@ -176,7 +167,8 @@
                 &::before {
                     display: block;
                     content: ' ';
-                    // '../../assets/call-sharp.svg'
+                    // '../../assets/call-sharp.svg' local
+                    // 'https://min.gitcdn.link/..' fix SVG and pull from CDN
                     background-image: url('https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/call-sharp.svg');
                     background-size: 20px 20px;
                     opacity: .75;
@@ -231,8 +223,9 @@
                 li a.facebook {
                     display: block;
                     content: ' ';
-                    // '../../assets/facebook.svg' 
-                    background-image: url('https://min.gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/facebook.svg');
+                    // '../../assets/facebook.svg' local
+                    // 'https://min.gitcdn.link/..' fix SVG and pull from CDN
+                    background-image: url('https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/facebook.svg');
                     background-size: 32px 32px;
                     opacity: .75;
                     height: 32px;
@@ -247,7 +240,8 @@
                 li a.instagram {
                     display: block;
                     content: ' ';
-                    // '../../assets/instagram.svg'
+                    // '../../assets/instagram.svg' local
+                    // 'https://min.gitcdn.link/..' fix SVG and pull from CDN
                     background-image: url('https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/instagram.svg');
                     background-size: 32px 32px;
                     opacity: .75;
@@ -263,7 +257,8 @@
                 li a.twitter {
                     display: block;
                     content: ' ';
-                    // '../../assets/twitter.svg' 
+                    // '../../assets/twitter.svg' local
+                    // 'https://min.gitcdn.link/..' fix SVG and pull from CDN
                     background-image: url('https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/twitter.svg');
                     background-size: 32px 32px;
                     opacity: .75;
@@ -279,7 +274,8 @@
                 li a.linkedin {
                     display: block;
                     content: ' ';
-                    // '../../assets/linkedin.svg'
+                    // '../../assets/linkedin.svg' local
+                    // 'https://min.gitcdn.link/..' fix SVG and pull from CDN
                     background-image: url('https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/linkedin.svg');
                     background-size: 32px 32px;
                     opacity: .75;
@@ -295,8 +291,9 @@
                 li a.youtube {
                     display: block;
                     content: ' ';
-                    // '../../assets/youtube.svg'
-                    background-image: url('https://min.gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/youtube.svg');
+                    // '../../assets/youtube.svg' local
+                    // 'https://min.gitcdn.link/..' fix SVG and pull from CDN
+                    background-image: url('https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/youtube.svg');
                     background-size: 32px 32px;
                     opacity: .75;
                     height: 32px;
@@ -345,8 +342,9 @@
                 .logo {
                     display: block;
                     content: ' ';
-                    // '../../assets/UHS-logo_white.svg'
-                    background-image: url('https://min.gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/UHS-logo_white.svg');
+                    // '../../assets/UHS-logo_white.svg' local
+                    // 'https://min.gitcdn.link/..' fix SVG and pull from CDN
+                    background-image: url('https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/UHS-logo_white.svg');
                     background-size: 90px 40px;
                     opacity: .6;
                     height: 40px;

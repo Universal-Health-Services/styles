@@ -264,29 +264,27 @@ $neutral: rgba(242, 247, 251, 1);
     // Header
     header {
 
-        .util-nav_wrapper {
-            background-color: #3c475a;
-        }
-
         .main-nav_wrapper {
             background-color: $white;
         }
 
-    }
-
-    // Page Header
-    .content-header {
-        background-color: #144b86;
-        margin-bottom: 3.125rem;
-        padding: 1.25rem 0;
-        h1 {
-            font-size: 2.875rem;
-            font-weight: 300;
-            line-height: 1.5em;
-            margin: 0;
-            padding: 0;
-            color: $white;
+        a {
+            color: #1069af;
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-decoration: none;
+            &:hover {
+                color: #075498;
+                text-decoration: underline;
+            }
         }
+
+        .logo img {
+            display: block;
+            width: 300px;
+            height: auto;
+        }
+
     }
 
     // Footer
