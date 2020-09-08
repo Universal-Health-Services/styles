@@ -69,7 +69,7 @@
  * ==========
  */
 .armc {
-  font-family: "Avenir", sans-serif;
+  font-family: "Avenir", Arial, Sans-serif;
   font-size: 18px;
   font-weight: 100;
   line-height: 25px;
@@ -357,6 +357,141 @@
   color: rgba(243, 243, 243, 0.6);
   font-size: .75rem;
   line-height: .9375rem;
+}
+
+.d7.armc header .util-nav_wrapper,
+.kyruus.armc header .util-nav_wrapper {
+  background-color: #3c475a;
+}
+
+.d7.armc header .main-nav_wrapper,
+.kyruus.armc header .main-nav_wrapper {
+  background-color: #ffffff;
+}
+
+.d7.armc .content-header,
+.kyruus.armc .content-header {
+  background-color: #144b86;
+  margin-bottom: 3.125rem;
+  padding: 1.25rem 0;
+}
+
+.d7.armc .content-header h1,
+.kyruus.armc .content-header h1 {
+  font-size: 2.875rem;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.d7.armc footer,
+.kyruus.armc footer {
+  padding-top: 5.625rem;
+  background-color: #465062;
+}
+
+.d7.armc footer p,
+.kyruus.armc footer p {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.d7.armc footer a,
+.kyruus.armc footer a {
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.d7.armc footer a:hover,
+.kyruus.armc footer a:hover {
+  text-decoration: underline;
+}
+
+.d7.armc footer .location,
+.kyruus.armc footer .location {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.d7.armc footer ul.main-nav,
+.kyruus.armc footer ul.main-nav {
+  margin: 0 0 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: right;
+}
+
+.d7.armc footer ul.main-nav li,
+.kyruus.armc footer ul.main-nav li {
+  display: block;
+}
+
+.d7.armc footer ul.main-nav li a,
+.kyruus.armc footer ul.main-nav li a {
+  display: inline-block;
+  color: #5fcef7 !important;
+  font-size: .75em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.d7.armc footer ul.main-nav li a:hover,
+.kyruus.armc footer ul.main-nav li a:hover {
+  color: #5fcef7 !important;
+  text-decoration: underline;
+}
+
+.d7.armc footer .footer-bottom,
+.kyruus.armc footer .footer-bottom {
+  background-color: #3c475a;
+  margin-top: 3.125rem;
+}
+
+.d7.armc footer .footer-bottom p,
+.kyruus.armc footer .footer-bottom p {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: .75rem;
+  line-height: 1.125rem;
+}
+
+.d7.armc footer .footer-bottom a,
+.kyruus.armc footer .footer-bottom a {
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.d7.armc footer .footer-bottom a:hover,
+.kyruus.armc footer .footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.d7.armc footer .footer-bottom ul.legal,
+.kyruus.armc footer .footer-bottom ul.legal {
+  margin-top: 0;
+}
+
+.d7.armc footer .footer-bottom ul.legal li,
+.kyruus.armc footer .footer-bottom ul.legal li {
+  display: inline-block;
+  font-size: .75rem;
+  line-height: 1.125rem;
+}
+
+.d7.armc footer .footer-bottom ul.legal li:after,
+.kyruus.armc footer .footer-bottom ul.legal li:after {
+  color: #ffffff;
+  font-weight: 600;
 }
 
 /* Call-to-Action
