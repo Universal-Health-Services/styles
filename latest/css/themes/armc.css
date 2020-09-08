@@ -359,31 +359,30 @@
   line-height: .9375rem;
 }
 
-.d7.armc header .util-nav_wrapper,
-.kyruus.armc header .util-nav_wrapper {
-  background-color: #3c475a;
-}
-
 .d7.armc header .main-nav_wrapper,
 .kyruus.armc header .main-nav_wrapper {
   background-color: #ffffff;
 }
 
-.d7.armc .content-header,
-.kyruus.armc .content-header {
-  background-color: #144b86;
-  margin-bottom: 3.125rem;
-  padding: 1.25rem 0;
+.d7.armc header a,
+.kyruus.armc header a {
+  color: #1069af;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-decoration: none;
 }
 
-.d7.armc .content-header h1,
-.kyruus.armc .content-header h1 {
-  font-size: 2.875rem;
-  font-weight: 300;
-  line-height: 1.5em;
-  margin: 0;
-  padding: 0;
-  color: #ffffff;
+.d7.armc header a:hover,
+.kyruus.armc header a:hover {
+  color: #075498;
+  text-decoration: underline;
+}
+
+.d7.armc header .logo img,
+.kyruus.armc header .logo img {
+  display: block;
+  width: 300px;
+  height: auto;
 }
 
 .d7.armc footer,
