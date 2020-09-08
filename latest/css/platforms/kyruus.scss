@@ -1,0 +1,363 @@
+/*
+ * Kyruus Page Builder
+ * ==========
+ * platforms/kyruus
+ */
+ @import "../abstracts/mixins";
+ @import "../abstracts/variables";
+ 
+ // Fonts, see individule theme files
+ // icons, see https://ionicons.com
+ /* 
+  * Kyruus (kyruus)
+  */
+ // support two size variations
+ .kyruus.armc,
+ .kyruus.gwuh,
+ .kyruus.lrmc,
+ .kyruus.mmhs,
+ .kyruus.nnmc,
+ .kyruus.nwths,
+ .kyruus.sths,
+ .kyruus.swhs,
+ .kyruus.vhs,
+ .kyruus.wrmc {
+   header .logo {
+     width: 300px;
+     height: auto;
+   }
+ }  
+ .kyruus.crmc,
+ .kyruus.dhl,
+ .kyruus.fdmc,
+ .kyruus.mmh,
+ .kyruus.prmc,
+ .kyruus.stm,
+ .kyruus.tmc,
+ .kyruus.tvh {
+   header .logo {
+     width: auto;
+     height: 68px;
+   }
+ }
+ // platform styles & default colors
+ .kyruus {
+ 
+    // Header
+    header {
+
+        @include respond-to('LG') {
+            
+            // d7 - replace default
+            .grid__fixed-width {
+                margin: 0 auto;
+                max-width: 1400px;
+                padding: 0 25px;
+                overflow: hidden;
+            }
+        }
+
+        .util-nav_wrapper {
+            //padding: 1.25rem 0;
+            background-color: #3c475a;
+        }
+
+        ul.util-nav {
+
+            li {
+                display: inline-block;
+                position: relative;
+                margin: 0 .625rem;
+                .search { margin-right: auto; }
+                .phone { margin-left: auto; }
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .main-nav_wrapper {
+            padding: 0;
+            background-color: $white;
+        }
+
+        .logo {
+            padding: 1.25rem 0;
+        }
+
+    }
+
+    // Footer
+    footer {
+
+        padding: 45px 0 0;
+
+        margin: 40px 0 0;
+
+        @include respond-to('XS') {
+            .grid-1-6 {
+            width: 100%;
+            }
+            .grid-5-6 {
+            width: 100%;
+            }
+        }
+        @include respond-to('SM') {
+            .grid-1-6 {
+            width: 100%;
+            }
+            .grid-5-6 {
+            width: 100%;
+            }
+        }
+        @include respond-to('MD') {
+            .grid-1-6 {
+                width: 25%;
+            }
+            .grid-5-6 {
+                width: 75%;
+            }
+            img.logo {
+                width: 101px;
+                height: auto;
+            }
+            p:first-of-type {
+                margin-top: 0;
+            }
+        }
+        @include respond-to('LG') {
+            
+            // d7 - replace default
+            .grid__fixed-width {
+                margin: 0 auto;
+                max-width: 1400px;
+                padding: 0 25px;
+                overflow: hidden;
+            }
+
+/*          .grid-1-6 {
+                width: 16.66667%;
+            }
+            .grid-5-6 {
+                width: 83.33333%;
+            } */
+
+            .location {
+                margin-top: 0;
+                margin-bottom: 1.25rem;
+            }
+
+            .addr,
+            .phone {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                margin-top: 0;
+                margin-bottom: .625rem;
+            }
+            .addr {
+                &::before {
+                    display: block;
+                    content: ' ';
+                    // '../../assets/location-sharp.svg' 
+                    background-image: url('https://min.gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/location-sharp.svg');
+                    background-size: 20px 20px;
+                    opacity: .75;
+                    margin-top: .35rem;
+                    margin-right: .625rem;
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+            .phone {
+                &::before {
+                    display: block;
+                    content: ' ';
+                    // '../../assets/call-sharp.svg'
+                    background-image: url('https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/call-sharp.svg');
+                    background-size: 20px 20px;
+                    opacity: .75;
+                    margin-top: .35rem;
+                    margin-right: .625rem;
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+
+            ul.main-nav {
+                padding: 0;
+                li {
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 0 .625rem;
+                    margin-right: .875rem;
+                    padding-right: 1.25rem;
+                    &:after {
+                        content: '/';
+                        display: inline-block;
+                        position: absolute;
+                        right: -2px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        color: #9ea6b6;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                        padding-right: 0;
+                    }
+                    &:last-child:after {
+                        display: none;
+                    }
+                }
+            }
+
+            ul.social {
+                padding: 0;
+                margin: 35px 0 10px auto;
+                li {
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 .625rem;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+                li a.facebook {
+                    display: block;
+                    content: ' ';
+                    // '../../assets/facebook.svg' 
+                    background-image: url('https://min.gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/facebook.svg');
+                    background-size: 32px 32px;
+                    opacity: .75;
+                    height: 32px;
+                    width: 32px;
+                    span {
+                        display: none;
+                    }
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                li a.instagram {
+                    display: block;
+                    content: ' ';
+                    // '../../assets/instagram.svg'
+                    background-image: url('https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/instagram.svg');
+                    background-size: 32px 32px;
+                    opacity: .75;
+                    height: 32px;
+                    width: 32px;
+                    span {
+                        display: none;
+                    }
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                li a.twitter {
+                    display: block;
+                    content: ' ';
+                    // '../../assets/twitter.svg' 
+                    background-image: url('https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/twitter.svg');
+                    background-size: 32px 32px;
+                    opacity: .75;
+                    height: 32px;
+                    width: 32px;
+                    span {
+                        display: none;
+                    }
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                li a.linkedin {
+                    display: block;
+                    content: ' ';
+                    // '../../assets/linkedin.svg'
+                    background-image: url('https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/linkedin.svg');
+                    background-size: 32px 32px;
+                    opacity: .75;
+                    height: 32px;
+                    width: 32px;
+                    span {
+                        display: none;
+                    }
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                li a.youtube {
+                    display: block;
+                    content: ' ';
+                    // '../../assets/youtube.svg'
+                    background-image: url('https://min.gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/youtube.svg');
+                    background-size: 32px 32px;
+                    opacity: .75;
+                    height: 32px;
+                    width: 32px;
+                    span {
+                        display: none;
+                    }
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .footer-bottom {
+
+                padding: 4.375rem 0;
+
+                p {
+                    margin: 0 0 1.25rem;
+                }
+
+                p.copyright {
+                    margin: 0 0 .625rem;
+                }
+
+                ul.legal {
+                    padding: 0;
+                    li {
+                        display: inline-block;
+                        margin-right: .5rem;
+                        padding-right: .625rem;
+                        position: relative;
+                        &:after {
+                            content: '|';
+                            display: inline-block;
+                            position: absolute;
+                            right: -2px;
+                            top: 1px;
+                        }
+                        &:last-child:after {
+                            display: none;
+                        }
+                    }
+                }
+
+                .logo {
+                    display: block;
+                    content: ' ';
+                    // '../../assets/UHS-logo_white.svg'
+                    background-image: url('https://min.gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/UHS-logo_white.svg');
+                    background-size: 90px 40px;
+                    opacity: .6;
+                    height: 40px;
+                    width: 90px;
+                    margin-right: 0;
+                    margin-left: auto;
+                }
+
+            }
+
+        }
+
+    }
+}

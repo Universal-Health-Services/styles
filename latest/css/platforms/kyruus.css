@@ -1,0 +1,369 @@
+/*
+ * Kyruus Page Builder
+ * ==========
+ * platforms/kyruus
+ */
+/* 
+ * Mixins
+ * ==========
+ * breakpoints - map of screen size key & value pairs
+ * respond-to - manage responsive rules
+ * clearfix
+ * fontface
+ */
+/*
+ * Define media breakpoints map
+ */
+/*
+ * @access public
+ * @param {String} $breakpoint - Breakpoint
+ * @requires $breakpoints
+ */
+/*
+ * Helper to clear inner floats
+ * @author Nicolas Gallagher
+ * @link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
+ */
+/*
+ * @font-face mixin
+ * Bulletproof font-face via Font Squirrel
+ * @include fontface('family', 'assets/fonts/', 'myfontname');
+ */
+/*
+@mixin fontface($font-family, $font-url, $font-name) {
+	@font-face {
+		font: {
+			family: $font-family;
+			style: normal;
+			weight: normal;
+		}
+		src: url($font-url + '/' + $font-name + '.eot');
+		src: url($font-url + '/' + $font-name + '.eot#iefix') format('embedded-opentype'),
+			 url($font-url + '/' + $font-name + '.woff') format('woff'),
+			 url($font-url + '/' + $font-name + '.ttf')  format('truetype'),
+			 url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
+	}
+}
+*/
+/*
+ * Variables
+ * ==========
+ * 
+ */
+/* 
+  * Kyruus (kyruus)
+  */
+.kyruus.armc header .logo,
+.kyruus.gwuh header .logo,
+.kyruus.lrmc header .logo,
+.kyruus.mmhs header .logo,
+.kyruus.nnmc header .logo,
+.kyruus.nwths header .logo,
+.kyruus.sths header .logo,
+.kyruus.swhs header .logo,
+.kyruus.vhs header .logo,
+.kyruus.wrmc header .logo {
+  width: 300px;
+  height: auto;
+}
+
+.kyruus.crmc header .logo,
+.kyruus.dhl header .logo,
+.kyruus.fdmc header .logo,
+.kyruus.mmh header .logo,
+.kyruus.prmc header .logo,
+.kyruus.stm header .logo,
+.kyruus.tmc header .logo,
+.kyruus.tvh header .logo {
+  width: auto;
+  height: 68px;
+}
+
+@media (min-width: 961px) {
+  .kyruus header .grid__fixed-width {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 25px;
+    overflow: hidden;
+  }
+}
+
+.kyruus header .util-nav_wrapper {
+  background-color: #3c475a;
+}
+
+.kyruus header ul.util-nav li {
+  display: inline-block;
+  position: relative;
+  margin: 0 .625rem;
+}
+
+.kyruus header ul.util-nav li .search {
+  margin-right: auto;
+}
+
+.kyruus header ul.util-nav li .phone {
+  margin-left: auto;
+}
+
+.kyruus header ul.util-nav li:first-child {
+  margin-left: 0;
+}
+
+.kyruus header ul.util-nav li:last-child {
+  margin-right: 0;
+}
+
+.kyruus header .main-nav_wrapper {
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.kyruus header .logo {
+  padding: 1.25rem 0;
+}
+
+.kyruus footer {
+  padding: 45px 0 0;
+  margin: 40px 0 0;
+}
+
+@media (max-width: 375px) {
+  .kyruus footer .grid-1-6 {
+    width: 100%;
+  }
+  .kyruus footer .grid-5-6 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 376px) {
+  .kyruus footer .grid-1-6 {
+    width: 100%;
+  }
+  .kyruus footer .grid-5-6 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .kyruus footer .grid-1-6 {
+    width: 25%;
+  }
+  .kyruus footer .grid-5-6 {
+    width: 75%;
+  }
+  .kyruus footer img.logo {
+    width: 101px;
+    height: auto;
+  }
+  .kyruus footer p:first-of-type {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 961px) {
+  .kyruus footer {
+    /*          .grid-1-6 {
+                width: 16.66667%;
+            }
+            .grid-5-6 {
+                width: 83.33333%;
+            } */
+  }
+  .kyruus footer .grid__fixed-width {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 25px;
+    overflow: hidden;
+  }
+  .kyruus footer .location {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+  .kyruus footer .addr,
+  .kyruus footer .phone {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 0;
+    margin-bottom: .625rem;
+  }
+  .kyruus footer .addr::before {
+    display: block;
+    content: ' ';
+    background-image: url("https://min.gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/location-sharp.svg");
+    background-size: 20px 20px;
+    opacity: .75;
+    margin-top: .35rem;
+    margin-right: .625rem;
+    height: 20px;
+    width: 20px;
+  }
+  .kyruus footer .phone::before {
+    display: block;
+    content: ' ';
+    background-image: url("https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/call-sharp.svg");
+    background-size: 20px 20px;
+    opacity: .75;
+    margin-top: .35rem;
+    margin-right: .625rem;
+    height: 20px;
+    width: 20px;
+  }
+  .kyruus footer ul.main-nav {
+    padding: 0;
+  }
+  .kyruus footer ul.main-nav li {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 .625rem;
+    margin-right: .875rem;
+    padding-right: 1.25rem;
+  }
+  .kyruus footer ul.main-nav li:after {
+    content: '/';
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ea6b6;
+  }
+  .kyruus footer ul.main-nav li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .kyruus footer ul.main-nav li:last-child:after {
+    display: none;
+  }
+  .kyruus footer ul.social {
+    padding: 0;
+    margin: 35px 0 10px auto;
+  }
+  .kyruus footer ul.social li {
+    display: inline-block;
+    position: relative;
+    margin: 0 .625rem;
+  }
+  .kyruus footer ul.social li:first-child {
+    margin-left: 0;
+  }
+  .kyruus footer ul.social li:last-child {
+    margin-right: 0;
+  }
+  .kyruus footer ul.social li a.facebook {
+    display: block;
+    content: ' ';
+    background-image: url("https://min.gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/facebook.svg");
+    background-size: 32px 32px;
+    opacity: .75;
+    height: 32px;
+    width: 32px;
+  }
+  .kyruus footer ul.social li a.facebook span {
+    display: none;
+  }
+  .kyruus footer ul.social li a.facebook:hover {
+    opacity: 1;
+  }
+  .kyruus footer ul.social li a.instagram {
+    display: block;
+    content: ' ';
+    background-image: url("https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/instagram.svg");
+    background-size: 32px 32px;
+    opacity: .75;
+    height: 32px;
+    width: 32px;
+  }
+  .kyruus footer ul.social li a.instagram span {
+    display: none;
+  }
+  .kyruus footer ul.social li a.instagram:hover {
+    opacity: 1;
+  }
+  .kyruus footer ul.social li a.twitter {
+    display: block;
+    content: ' ';
+    background-image: url("https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/twitter.svg");
+    background-size: 32px 32px;
+    opacity: .75;
+    height: 32px;
+    width: 32px;
+  }
+  .kyruus footer ul.social li a.twitter span {
+    display: none;
+  }
+  .kyruus footer ul.social li a.twitter:hover {
+    opacity: 1;
+  }
+  .kyruus footer ul.social li a.linkedin {
+    display: block;
+    content: ' ';
+    background-image: url("https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/linkedin.svg");
+    background-size: 32px 32px;
+    opacity: .75;
+    height: 32px;
+    width: 32px;
+  }
+  .kyruus footer ul.social li a.linkedin span {
+    display: none;
+  }
+  .kyruus footer ul.social li a.linkedin:hover {
+    opacity: 1;
+  }
+  .kyruus footer ul.social li a.youtube {
+    display: block;
+    content: ' ';
+    background-image: url("https://min.gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/youtube.svg");
+    background-size: 32px 32px;
+    opacity: .75;
+    height: 32px;
+    width: 32px;
+  }
+  .kyruus footer ul.social li a.youtube span {
+    display: none;
+  }
+  .kyruus footer ul.social li a.youtube:hover {
+    opacity: 1;
+  }
+  .kyruus footer .footer-bottom {
+    padding: 4.375rem 0;
+  }
+  .kyruus footer .footer-bottom p {
+    margin: 0 0 1.25rem;
+  }
+  .kyruus footer .footer-bottom p.copyright {
+    margin: 0 0 .625rem;
+  }
+  .kyruus footer .footer-bottom ul.legal {
+    padding: 0;
+  }
+  .kyruus footer .footer-bottom ul.legal li {
+    display: inline-block;
+    margin-right: .5rem;
+    padding-right: .625rem;
+    position: relative;
+  }
+  .kyruus footer .footer-bottom ul.legal li:after {
+    content: '|';
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    top: 1px;
+  }
+  .kyruus footer .footer-bottom ul.legal li:last-child:after {
+    display: none;
+  }
+  .kyruus footer .footer-bottom .logo {
+    display: block;
+    content: ' ';
+    background-image: url("https://min.gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/UHS-logo_white.svg");
+    background-size: 90px 40px;
+    opacity: .6;
+    height: 40px;
+    width: 90px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}

@@ -227,6 +227,37 @@ $gc: $grid-columns;
     }
 }
 
-.grid-wrap {
-    flex-wrap: wrap;
+// responsive containers
+.grid {
+    display: flex;
+    &-align,
+    &-vert {
+        &-center {
+            margin: auto 0;
+            align-content: center;
+        }
+    }
+    &-justify,
+    &-hori {
+        &-center {
+            margin: 0 auto;
+            justify-content: center;
+        }
+        &-right {
+            margin-right: 0;
+            margin-left: auto;
+            justify-content: right;
+        }
+        &-left {
+            margin-right: auto;
+            margin-left: 0;
+            justify-content: right;
+        }
+    }
+    &-wrap {
+        flex-wrap: wrap;
+    }
+    &-nowrap {
+        flex-wrap: nowrap;
+    }
 }
