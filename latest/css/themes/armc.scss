@@ -259,15 +259,14 @@ $neutral: rgba(242, 247, 251, 1);
 
 // Drupal7 & Kyruss
 .d7.armc,
+.d8.armc,
 .kyruus.armc {
 
     // Header
     header {
-
         .main-nav_wrapper {
             background-color: $white;
         }
-
         a {
             color: #1069af;
             font-size: 1.25rem;
@@ -278,28 +277,32 @@ $neutral: rgba(242, 247, 251, 1);
                 text-decoration: underline;
             }
         }
-
-        .logo img {
-            display: block;
-            width: 300px;
-            height: auto;
+        @include respond-to('XS') {
+            .logo img {
+                display: block;
+                width: 200px;
+                height: auto;
+            }
         }
-
+        @include respond-to('SM') {
+            .logo img {
+                display: block;
+                width: 300px;
+                height: auto;
+            }
+        }
     }
 
     // Footer
-    footer {
-
-        padding-top: 5.625rem;
+    footer.d7,
+    footer.d8 {
         background-color: #465062;
-
         p {
             color: $white;
             font-weight: 600;
             font-size: 1rem;
             line-height: 2rem;
         }
-
         a {
             color: $white;
             font-weight: 900;
@@ -307,50 +310,105 @@ $neutral: rgba(242, 247, 251, 1);
             &:hover {
                 text-decoration: underline;
             }
-        }
-
-        .location {
+        } 
+        .name,
+        .footer-bottom .name {
             font-size: 1.25rem;
             font-weight: 900;
         }
 
-        ul.main-nav {
-            margin: 0 0 0 auto;
-            padding: 0;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-content: right;
-            li {
-                display: block;
-                a {
-                    display: inline-block;
-                    color: #5fcef7 !important;
-                    font-size: .75em;
-                    font-weight: 900;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
+        .footer-bottom {
+            background-color: #3c475a;
+        }
+    }
+    footer.d8 {
+        ul.main-nav li a {
+            color: #5fcef7 !important;
+            font-size: .75em;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            &:hover {
+                color: $white !important;
+                text-decoration: none;
+            }
+        }
+        .footer-bottom {
+            p {
+                color: rgba(255, 255, 255, .60);
+                font-weight: 600;
+                font-size: .75rem;
+                line-height: 1.125rem;
+            }
+            a {
+                color: rgba(255, 255, 255, .60);
+                font-weight: 900;
+                text-decoration: none;
+                &:hover {
+                    color: $white;
                     text-decoration: none;
-                    &:hover {
-                        color: #5fcef7 !important;
+                }
+            }
+            .name,
+            .footer-bottom .name {
+                color: $white;
+            }
+            ul.main-nav li a {
+                color: #5fcef7 !important;
+                font-size: .75em;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                text-decoration: none;
+                &:hover {
+                    color: $white !important;
+                    text-decoration: none;
+                }
+            }
+            ul.legal {
+                margin-top: 0;
+                li {
+                    display: inline-block;
+                    font-size: .75rem;
+                    line-height: 1.125rem;
+                    &:after {
+                        color: rgba(255, 255, 255, .60);
+                        font-weight: 600;
+                    }
+                    a {
+                        color: rgba(255, 255, 255, .60);
+                        font-weight: 900;
                         text-decoration: underline;
+                        &:hover {
+                            color: $white;
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
         }
-
+    }
+    footer.d7 {
+        ul.main-nav li a {
+            color: #5fcef7 !important;
+            font-size: .75em;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            &:hover {
+                color: #5fcef7 !important;
+                text-decoration: underline;
+            }
+        }
         .footer-bottom {
-
-            background-color: #3c475a;
-            margin-top: 3.125rem;
-            
             p {
                 color: $white;
                 font-weight: 600;
                 font-size: .75rem;
                 line-height: 1.125rem;
             }
-
             a {
                 color: $white;
                 font-weight: 900;
@@ -359,7 +417,6 @@ $neutral: rgba(242, 247, 251, 1);
                     text-decoration: underline;
                 }
             }
-
             ul.legal {
                 margin-top: 0;
                 li {
@@ -370,11 +427,18 @@ $neutral: rgba(242, 247, 251, 1);
                         color: $white;
                         font-weight: 600;
                     }
+                    a {
+                        color: $white;
+                        font-weight: 900;
+                        text-decoration: none;
+                        &:hover {
+                            color: rgba(255, 255, 255, .60);
+                            text-decoration: underline;
+                        }
+                    }
                 }
             }
-
         }
-
     }
 }
 

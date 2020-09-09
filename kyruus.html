@@ -12,9 +12,9 @@
 
         <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/Universal-Health-Services/styles/master/latest/css/main.min.css" />
         <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/Universal-Health-Services/styles/master/latest/css/platforms/kyruus.min.css" />
-        <!-- local - link rel="stylesheet" type="text/css" href="./latest/css/platforms/kyruus.min.css" / -->
+        <!-- link rel="stylesheet" type="text/css" href="./latest/css/platforms/kyruus.min.css" / -->
         <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/Universal-Health-Services/styles/master/latest/css/themes/armc.min.css" />
-        <!-- local - link rel="stylesheet" type="text/css" href="./latest/css/themes/armc.min.css" / -->
+        <!-- link rel="stylesheet" type="text/css" href="./latest/css/themes/armc.min.css" / -->
 
         <link rel="icon" href="https://cdn.sanity.io/images/89obqmi5/locations/41c54eeb2c8f6e4b24daf9b6f7427e0d9acabf1c-120x120.png" sizes="32x32" />
         <link rel="icon" href="https://cdn.sanity.io/images/89obqmi5/locations/f07edb1b748fa7d9283c533596c598c4b8a35a2a-250x250.png" sizes="192x192"/>
@@ -27,53 +27,111 @@
 
     <body class="main kyruus armc">
 
-        <header class="grid-container-col grid-1-1">
-
+        <!-- Drupal 8 layouts -->
+        <header class="d8 grid-container-col grid-1-1">
             <div class="grid-container-row grid__fixed-width main-nav_wrapper">
-
-                <div class="grid-container-col grid-1-3">
-                    <a class="logo" href="https://www.aikenregional.com/">
-                        <img src="https://cdn.sanity.io/images/89obqmi5/locations/2d6ecf2a8fd91b1ef9e577c7be079fbd411c6ca6-500x100.png" alt="Aiken Regional Medical Centers" />
-                    </a>
-                </div>
-
-                <div class="grid-container-col grid-2-3 return_wrapper">
-                    <div class="return">
-                        <a href="https://www.aikenregional.com/">Return to Aiken Regional Medical Centers ></a>
-                    </div>
-                </div>
-
-            </div>
-
-        </header>
-
-        <header>
-
-            <div class="grid-container-row grid__fixed-width main-nav_wrapper">
-
                 <div class="grid-container-col grid-1-3">
                     <a class="logo" href="https://www.aikenphysicians.com/">
-                        <img src="https://cdn.sanity.io/images/89obqmi5/locations/27dcddfe98081e86d6b06da61eff468e6a6674c3-600x114.png" alt="Aiken Physicians Alliance, Affiliated with Aiken Regional Medical Centers" />
+                        <img src="https://cdn.sanity.io/images/89obqmi5/locations/5d466053b509947c5930c66ca6f97e4e110f9df4-600x115.png" alt="Aiken Physicians Alliance, Affiliated with Aiken Regional Medical Centers" />
                     </a>
                 </div>
-
                 <div class="grid-container-col grid-2-3 return_wrapper">
                     <div class="return">
                         <a href="https://www.aikenphysicians.com/">Return to Aiken Physicians Alliance ></a>
                     </div>
                 </div>
-
             </div>
-
         </header>
 
-        <footer class="grid-container-col grid-1-1">
+        <footer class="d8 grid-container-col grid-1-1">
 
             <div class="grid-container-row grid__fixed-width">
                 <div class="grid-container-col grid-1-3">
-                    <p class="location ">Aiken Regional Medical Centers</p>
-                    <p class="addr grid-vert-center">302 University Parkway, Aiken, SC 29801</p>
-                    <p class="phone grid-vert-center"><a href="tel:803-641-5000">803-641-5000</a></p>
+                    <p class="name">Aiken Physicians Alliance</p>
+                    <ul class="grid-container-row main-nav">
+                        <li><a href="https://www.aikenregional.com/about-us/contact-us">contact us</a></li>
+                        <li><a href="https://www.aikenregional.com/careers">careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="grid-container-col grid-2-3">
+                    <ul class="grid-container-row social">
+                        <li>
+                            <a class="facebook" href="https://www.facebook.com/pages/Aiken-Regional-Medical-Centers/99774445931" target="_blank">
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="footer-bottom" class="grid-container-col footer-bottom">
+
+                <div class="grid-container-row grid__fixed-width">
+
+                    <div class="grid-container-col grid-2-3">
+                        <p class="name">Affiliated with Aiken Regional Medical Centers</p>
+                        <ul class="grid-container-row main-nav">
+                            <li><a href="https://www.aikenregional.com/">Aiken Regional Medical Centers</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-container-col grid-1-3">
+                        <a class="grid-container-col logo" href="https://www.aikenphysicians.com/">
+                            <img src="https://cdn.sanity.io/images/89obqmi5/locations/2a628711246b57e5d1a93d766e241594c6a0edbf-600x115.png" alt="Aiken Physicians Alliance, Affiliated with Aiken Regional Medical Centers" />
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="grid-container-col grid__fixed-width">
+                    <p>Aiken Physicians Alliance is owned and operated by a subsidiary of Universal Health Services, Inc. (UHS), a King of Prussia, PA-based company, one of the largest healthcare management companies in the nation.</p>
+                    <p>Note: The information on this website is provided as general health guidelines and may not be applicable to your particular health condition. Your individual health status and any required medical treatments can only be properly addressed by a professional healthcare provider of your choice. Remember: There is no adequate substitution for a personal consultation with your physician. Neither Aiken Physicians Alliance, or any of their affiliates, nor any contributors shall have any liability for the content or any errors or omissions in the information provided by this website.</p>
+                    <p>The information, content and artwork provided by this website is intended for non-commercial use by the reader. The reader is permitted to make one copy of the information displayed for his/her own non-commercial use. The making of additional copies is prohibited.</p>
+                </div>
+
+                <div class="grid-container-col grid__fixed-width">
+
+                    <ul class="legal">
+                        <li><a href="https://www.aikenphysicians.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://www.aikenphysicians.com/hipaa-statement">HIPAA Statement</a></li>
+                        <li><a href="https://www.aikenphysicians.com/sites/aikenphysicians/files/inline-files/aiken-professional-association-language-assistance.pdf" target="_blank">Language Assistance</a></li>
+                        <li><a href="https://www.aikenphysicians.com/notice-of-nondiscrimination">Nondiscrimination Notice</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="grid-container-row grid__fixed-width">
+                    <p class="copyright">© 2020 Aiken Physicians Alliance. All rights reserved.</p>
+                </div>
+            
+            </div>
+
+        </footer>
+
+        <!-- Drupal 7 layouts -->
+        <header class="d7 grid-container-col grid-1-1">
+            <div class="grid-container-row grid__fixed-width main-nav_wrapper">
+                <div class="grid-container-col grid-1-3">
+                    <a class="logo" href="https://www.aikenregional.com/">
+                        <img src="https://cdn.sanity.io/images/89obqmi5/locations/2d6ecf2a8fd91b1ef9e577c7be079fbd411c6ca6-500x100.png" alt="Aiken Regional Medical Centers" />
+                    </a>
+                </div>
+                <div class="grid-container-col grid-2-3 return_wrapper">
+                    <div class="return">
+                        <a href="https://www.aikenregional.com/">Return to Aiken Regional Medical Centers ></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <footer class="d7 grid-container-col grid-1-1">
+
+            <div class="grid-container-row grid__fixed-width">
+                <div class="grid-container-col grid-1-3">
+                    <p class="name">Aiken Regional Medical Centers</p>
+                    <p class="grid-container-row addr">302 University Parkway, Aiken, SC 29801</p>
+                    <p class="grid-container-row phone"><a href="tel:803-641-5000">803-641-5000</a></p>
                 </div>
                 <div class="grid-container-col grid-2-3">
                     <ul class="grid-container-row main-nav">
@@ -114,35 +172,29 @@
             </div>
 
             <div id="footer-bottom" class="grid-container-col footer-bottom">
-
                 <div class="grid-container-col grid__fixed-width">
                     <p>Aiken Regional Medical Centers is owned and operated by a subsidiary of <a href="http://www.uhsinc.com/" target="_blank">Universal Health Services, Inc. (UHS)</a>, a King of Prussia, PA-based company, that is one of the largest healthcare management companies in the nation.</p>
                     <p>The information on this website is provided as general health guidelines and may not be applicable to your particular health condition. Your individual health status and any required medical treatments can only be properly addressed by a professional healthcare provider of your choice. Remember: There is no adequate substitution for a personal consultation with your physician. Neither Aiken Regional Medical Centers, or any of their affiliates, nor any contributors shall have any liability for the content or any errors or omissions in the information provided by this website.</p>
                     <p>The information, content and artwork provided by this website is intended for non-commercial use by the reader. The reader is permitted to make one copy of the information displayed for his/her own non-commercial use. The making of additional copies is prohibited.</p>
                 </div>
-
                 <div class="grid-container-col grid__fixed-width">
-
                     <ul class="legal">
-                        <li class="menu__item"><a href="http://www.aikenregional.com/sitemap" title="Site Map" class="menu__link">Site Map</a></li>
-                        <li class="menu__item"><a href="http://www.aikenregional.com/privacy-policy" class="menu__link">Privacy Policy</a></li>
-                        <li class="menu__item"><a href="http://www.aikenregional.com/hipaa-statement" class="menu__link">HIPAA Statement</a></li>
-                        <li class="menu__item"><a href="http://www.aikenregional.com/physician-disclaimer" class="menu__link">Physician Disclaimer</a></li>
-                        <li class="menu__item"><a href="http://www.aikenregional.com/notice-of-nondiscrimination" class="menu__link">Nondiscrimination Notice</a></li>
-                        <li class="menu__item"><a href="http://www.aikenregional.com/sites/aikenregional.com/files/AIK_ACA_LangAssist.pdf" target="_blank" class="menu__link">Language Assistance</a></li>
+                        <li><a href="http://www.aikenregional.com/sitemap" title="Site Map">Site Map</a></li>
+                        <li><a href="http://www.aikenregional.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="http://www.aikenregional.com/hipaa-statement">HIPAA Statement</a></li>
+                        <li><a href="http://www.aikenregional.com/physician-disclaimer">Physician Disclaimer</a></li>
+                        <li><a href="http://www.aikenregional.com/notice-of-nondiscrimination">Nondiscrimination Notice</a></li>
+                        <li><a href="http://www.aikenregional.com/sites/aikenregional.com/files/AIK_ACA_LangAssist.pdf" target="_blank">Language Assistance</a></li>
                     </ul>
-
                 </div>
-
                 <div class="grid-container-row grid__fixed-width">
                     <div class="grid-container-col grid-5-6">
-                    <p class="copyright">© 2020 Aiken Regional Medical Centers. All rights reserved.</p>
+                        <p class="copyright">© 2020 Aiken Regional Medical Centers. All rights reserved.</p>
                     </div>
                     <div class="grid-container-col grid-1-6">
-                        <div class="logo"></div>
+                        <div class="uhs-logo"></div>
                     </div>
                 </div>
-            
             </div>
 
         </footer>

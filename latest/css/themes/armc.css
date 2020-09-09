@@ -360,11 +360,13 @@
 }
 
 .d7.armc header .main-nav_wrapper,
+.d8.armc header .main-nav_wrapper,
 .kyruus.armc header .main-nav_wrapper {
   background-color: #ffffff;
 }
 
 .d7.armc header a,
+.d8.armc header a,
 .kyruus.armc header a {
   color: #1069af;
   font-size: 1.25rem;
@@ -373,68 +375,101 @@
 }
 
 .d7.armc header a:hover,
+.d8.armc header a:hover,
 .kyruus.armc header a:hover {
   color: #075498;
   text-decoration: underline;
 }
 
-.d7.armc header .logo img,
-.kyruus.armc header .logo img {
-  display: block;
-  width: 300px;
-  height: auto;
+@media (max-width: 375px) {
+  .d7.armc header .logo img,
+  .d8.armc header .logo img,
+  .kyruus.armc header .logo img {
+    display: block;
+    width: 200px;
+    height: auto;
+  }
 }
 
-.d7.armc footer,
-.kyruus.armc footer {
-  padding-top: 5.625rem;
+@media (min-width: 376px) {
+  .d7.armc header .logo img,
+  .d8.armc header .logo img,
+  .kyruus.armc header .logo img {
+    display: block;
+    width: 300px;
+    height: auto;
+  }
+}
+
+.d7.armc footer.d7,
+.d7.armc footer.d8,
+.d8.armc footer.d7,
+.d8.armc footer.d8,
+.kyruus.armc footer.d7,
+.kyruus.armc footer.d8 {
   background-color: #465062;
 }
 
-.d7.armc footer p,
-.kyruus.armc footer p {
+.d7.armc footer.d7 p,
+.d7.armc footer.d8 p,
+.d8.armc footer.d7 p,
+.d8.armc footer.d8 p,
+.kyruus.armc footer.d7 p,
+.kyruus.armc footer.d8 p {
   color: #ffffff;
   font-weight: 600;
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.d7.armc footer a,
-.kyruus.armc footer a {
+.d7.armc footer.d7 a,
+.d7.armc footer.d8 a,
+.d8.armc footer.d7 a,
+.d8.armc footer.d8 a,
+.kyruus.armc footer.d7 a,
+.kyruus.armc footer.d8 a {
   color: #ffffff;
   font-weight: 900;
   text-decoration: none;
 }
 
-.d7.armc footer a:hover,
-.kyruus.armc footer a:hover {
+.d7.armc footer.d7 a:hover,
+.d7.armc footer.d8 a:hover,
+.d8.armc footer.d7 a:hover,
+.d8.armc footer.d8 a:hover,
+.kyruus.armc footer.d7 a:hover,
+.kyruus.armc footer.d8 a:hover {
   text-decoration: underline;
 }
 
-.d7.armc footer .location,
-.kyruus.armc footer .location {
+.d7.armc footer.d7 .name,
+.d7.armc footer.d7 .footer-bottom .name,
+.d7.armc footer.d8 .name,
+.d7.armc footer.d8 .footer-bottom .name,
+.d8.armc footer.d7 .name,
+.d8.armc footer.d7 .footer-bottom .name,
+.d8.armc footer.d8 .name,
+.d8.armc footer.d8 .footer-bottom .name,
+.kyruus.armc footer.d7 .name,
+.kyruus.armc footer.d7 .footer-bottom .name,
+.kyruus.armc footer.d8 .name,
+.kyruus.armc footer.d8 .footer-bottom .name {
   font-size: 1.25rem;
   font-weight: 900;
 }
 
-.d7.armc footer ul.main-nav,
-.kyruus.armc footer ul.main-nav {
-  margin: 0 0 0 auto;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: right;
+.d7.armc footer.d7 .footer-bottom,
+.d7.armc footer.d8 .footer-bottom,
+.d8.armc footer.d7 .footer-bottom,
+.d8.armc footer.d8 .footer-bottom,
+.kyruus.armc footer.d7 .footer-bottom,
+.kyruus.armc footer.d8 .footer-bottom {
+  background-color: #3c475a;
 }
 
-.d7.armc footer ul.main-nav li,
-.kyruus.armc footer ul.main-nav li {
-  display: block;
-}
-
-.d7.armc footer ul.main-nav li a,
-.kyruus.armc footer ul.main-nav li a {
-  display: inline-block;
+.d7.armc footer.d8 ul.main-nav li a,
+.d8.armc footer.d8 ul.main-nav li a,
+.kyruus.armc footer.d8 ul.main-nav li a {
   color: #5fcef7 !important;
   font-size: .75em;
   font-weight: 900;
@@ -443,54 +478,175 @@
   text-decoration: none;
 }
 
-.d7.armc footer ul.main-nav li a:hover,
-.kyruus.armc footer ul.main-nav li a:hover {
-  color: #5fcef7 !important;
-  text-decoration: underline;
+.d7.armc footer.d8 ul.main-nav li a:hover,
+.d8.armc footer.d8 ul.main-nav li a:hover,
+.kyruus.armc footer.d8 ul.main-nav li a:hover {
+  color: #ffffff !important;
+  text-decoration: none;
 }
 
-.d7.armc footer .footer-bottom,
-.kyruus.armc footer .footer-bottom {
-  background-color: #3c475a;
-  margin-top: 3.125rem;
-}
-
-.d7.armc footer .footer-bottom p,
-.kyruus.armc footer .footer-bottom p {
-  color: #ffffff;
+.d7.armc footer.d8 .footer-bottom p,
+.d8.armc footer.d8 .footer-bottom p,
+.kyruus.armc footer.d8 .footer-bottom p {
+  color: rgba(255, 255, 255, 0.6);
   font-weight: 600;
   font-size: .75rem;
   line-height: 1.125rem;
 }
 
-.d7.armc footer .footer-bottom a,
-.kyruus.armc footer .footer-bottom a {
-  color: #ffffff;
+.d7.armc footer.d8 .footer-bottom a,
+.d8.armc footer.d8 .footer-bottom a,
+.kyruus.armc footer.d8 .footer-bottom a {
+  color: rgba(255, 255, 255, 0.6);
   font-weight: 900;
   text-decoration: none;
 }
 
-.d7.armc footer .footer-bottom a:hover,
-.kyruus.armc footer .footer-bottom a:hover {
-  text-decoration: underline;
+.d7.armc footer.d8 .footer-bottom a:hover,
+.d8.armc footer.d8 .footer-bottom a:hover,
+.kyruus.armc footer.d8 .footer-bottom a:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.d7.armc footer .footer-bottom ul.legal,
-.kyruus.armc footer .footer-bottom ul.legal {
+.d7.armc footer.d8 .footer-bottom .name,
+.d7.armc footer.d8 .footer-bottom .footer-bottom .name,
+.d8.armc footer.d8 .footer-bottom .name,
+.d8.armc footer.d8 .footer-bottom .footer-bottom .name,
+.kyruus.armc footer.d8 .footer-bottom .name,
+.kyruus.armc footer.d8 .footer-bottom .footer-bottom .name {
+  color: #ffffff;
+}
+
+.d7.armc footer.d8 .footer-bottom ul.main-nav li a,
+.d8.armc footer.d8 .footer-bottom ul.main-nav li a,
+.kyruus.armc footer.d8 .footer-bottom ul.main-nav li a {
+  color: #5fcef7 !important;
+  font-size: .75em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.d7.armc footer.d8 .footer-bottom ul.main-nav li a:hover,
+.d8.armc footer.d8 .footer-bottom ul.main-nav li a:hover,
+.kyruus.armc footer.d8 .footer-bottom ul.main-nav li a:hover {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.d7.armc footer.d8 .footer-bottom ul.legal,
+.d8.armc footer.d8 .footer-bottom ul.legal,
+.kyruus.armc footer.d8 .footer-bottom ul.legal {
   margin-top: 0;
 }
 
-.d7.armc footer .footer-bottom ul.legal li,
-.kyruus.armc footer .footer-bottom ul.legal li {
+.d7.armc footer.d8 .footer-bottom ul.legal li,
+.d8.armc footer.d8 .footer-bottom ul.legal li,
+.kyruus.armc footer.d8 .footer-bottom ul.legal li {
   display: inline-block;
   font-size: .75rem;
   line-height: 1.125rem;
 }
 
-.d7.armc footer .footer-bottom ul.legal li:after,
-.kyruus.armc footer .footer-bottom ul.legal li:after {
+.d7.armc footer.d8 .footer-bottom ul.legal li:after,
+.d8.armc footer.d8 .footer-bottom ul.legal li:after,
+.kyruus.armc footer.d8 .footer-bottom ul.legal li:after {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.d7.armc footer.d8 .footer-bottom ul.legal li a,
+.d8.armc footer.d8 .footer-bottom ul.legal li a,
+.kyruus.armc footer.d8 .footer-bottom ul.legal li a {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.d7.armc footer.d8 .footer-bottom ul.legal li a:hover,
+.d8.armc footer.d8 .footer-bottom ul.legal li a:hover,
+.kyruus.armc footer.d8 .footer-bottom ul.legal li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.d7.armc footer.d7 ul.main-nav li a,
+.d8.armc footer.d7 ul.main-nav li a,
+.kyruus.armc footer.d7 ul.main-nav li a {
+  color: #5fcef7 !important;
+  font-size: .75em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.d7.armc footer.d7 ul.main-nav li a:hover,
+.d8.armc footer.d7 ul.main-nav li a:hover,
+.kyruus.armc footer.d7 ul.main-nav li a:hover {
+  color: #5fcef7 !important;
+  text-decoration: underline;
+}
+
+.d7.armc footer.d7 .footer-bottom p,
+.d8.armc footer.d7 .footer-bottom p,
+.kyruus.armc footer.d7 .footer-bottom p {
   color: #ffffff;
   font-weight: 600;
+  font-size: .75rem;
+  line-height: 1.125rem;
+}
+
+.d7.armc footer.d7 .footer-bottom a,
+.d8.armc footer.d7 .footer-bottom a,
+.kyruus.armc footer.d7 .footer-bottom a {
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.d7.armc footer.d7 .footer-bottom a:hover,
+.d8.armc footer.d7 .footer-bottom a:hover,
+.kyruus.armc footer.d7 .footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.d7.armc footer.d7 .footer-bottom ul.legal,
+.d8.armc footer.d7 .footer-bottom ul.legal,
+.kyruus.armc footer.d7 .footer-bottom ul.legal {
+  margin-top: 0;
+}
+
+.d7.armc footer.d7 .footer-bottom ul.legal li,
+.d8.armc footer.d7 .footer-bottom ul.legal li,
+.kyruus.armc footer.d7 .footer-bottom ul.legal li {
+  display: inline-block;
+  font-size: .75rem;
+  line-height: 1.125rem;
+}
+
+.d7.armc footer.d7 .footer-bottom ul.legal li:after,
+.d8.armc footer.d7 .footer-bottom ul.legal li:after,
+.kyruus.armc footer.d7 .footer-bottom ul.legal li:after {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.d7.armc footer.d7 .footer-bottom ul.legal li a,
+.d8.armc footer.d7 .footer-bottom ul.legal li a,
+.kyruus.armc footer.d7 .footer-bottom ul.legal li a {
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.d7.armc footer.d7 .footer-bottom ul.legal li a:hover,
+.d8.armc footer.d7 .footer-bottom ul.legal li a:hover,
+.kyruus.armc footer.d7 .footer-bottom ul.legal li a:hover {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: underline;
 }
 
 /* Call-to-Action
