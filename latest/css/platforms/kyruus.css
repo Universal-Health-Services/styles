@@ -1,7 +1,7 @@
 /*
  * Kyruus Page Builder
  * ==========
- * platforms/kyruus
+ * platforms/kyruus (kyruus)
  */
 /* 
  * Mixins
@@ -50,300 +50,619 @@
  * ==========
  * 
  */
-/* 
-  * Kyruus (kyruus)
-  */
-.kyruus.armc header .logo,
-.kyruus.gwuh header .logo,
-.kyruus.lrmc header .logo,
-.kyruus.mmhs header .logo,
-.kyruus.nnmc header .logo,
-.kyruus.nwths header .logo,
-.kyruus.sths header .logo,
-.kyruus.swhs header .logo,
-.kyruus.vhs header .logo,
-.kyruus.wrmc header .logo {
-  width: 300px;
-  height: auto;
+.kyruus {
+  margin: 0;
 }
 
-.kyruus.crmc header .logo,
-.kyruus.dhl header .logo,
-.kyruus.fdmc header .logo,
-.kyruus.mmh header .logo,
-.kyruus.prmc header .logo,
-.kyruus.stm header .logo,
-.kyruus.tmc header .logo,
-.kyruus.tvh header .logo {
-  width: auto;
-  height: 68px;
+@media (max-width: 375px) {
+  .kyruus .d7 .grid__fixed-width {
+    margin: 0;
+    width: auto;
+    max-width: 375px;
+    padding: 0 5px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 376px) {
+  .kyruus .d7 .grid__fixed-width {
+    margin: 0;
+    width: auto;
+    max-width: 1399px;
+    padding: 0 25px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 576px) {
+  .kyruus .d7 .grid__fixed-width {
+    width: calc(100% - 50px);
+  }
+}
+
+@media (min-width: 961px) {
+  .kyruus .d7 .grid__fixed-width {
+    margin: 0 auto;
+    max-width: 1400px;
+  }
 }
 
 .kyruus header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-@media (min-width: 961px) {
-  .kyruus header .grid__fixed-width {
+@media (max-width: 375px) {
+  .kyruus header .grid-1-3 {
+    width: calc(100% - 10px);
+  }
+  .kyruus header .grid-2-3 {
+    width: calc(100% - 10px);
+  }
+  .kyruus header .logo {
     margin: 0 auto;
-    max-width: 1400px;
-    padding: 0 25px;
-    overflow: hidden;
+    padding: 1.25rem 0 .625rem;
+  }
+  .kyruus header .return_wrapper {
+    margin: auto 0;
+  }
+  .kyruus header .return {
+    text-align: center;
   }
 }
 
-.kyruus header .main-nav_wrapper {
-  padding: 0;
-  background-color: #ffffff;
+@media (min-width: 376px) {
+  .kyruus header .grid-1-3 {
+    width: 100%;
+  }
+  .kyruus header .grid-2-3 {
+    width: 100%;
+  }
+  .kyruus header .logo {
+    margin: 0 auto;
+    padding: 1.25rem 0 .625rem 0;
+  }
+  .kyruus header .return_wrapper {
+    margin: 0 auto;
+    padding: .625rem 0 1.25rem 0;
+  }
+  .kyruus header .return {
+    text-align: center;
+  }
 }
 
-.kyruus header .return_wrapper {
-  margin: auto 0;
+@media (min-width: 576px) {
+  .kyruus header .grid-1-3 {
+    width: 50%;
+  }
+  .kyruus header .grid-2-3 {
+    width: 50%;
+  }
+  .kyruus header .logo {
+    margin: 0 auto 0 0;
+    padding: 1.25rem 0;
+  }
+  .kyruus header .return_wrapper {
+    margin: auto 0;
+    padding: 0;
+  }
+  .kyruus header .return {
+    text-align: right;
+  }
 }
 
-.kyruus header .return {
-  text-align: right;
-}
-
-.kyruus header .logo {
-  padding: 1.25rem 0;
+@media (min-width: 961px) {
+  .kyruus header .grid-1-3 {
+    width: 33.333%;
+  }
+  .kyruus header .grid-2-3 {
+    width: 66.666%;
+  }
 }
 
 .kyruus footer {
-  padding: 45px 0 0;
   margin: 40px 0 0;
 }
 
 @media (max-width: 375px) {
-  .kyruus footer .grid-1-6 {
-    width: 100%;
+  .kyruus footer {
+    padding-top: 2.8125rem;
   }
+  .kyruus footer .grid-1-3,
+  .kyruus footer .grid-2-3,
+  .kyruus footer .grid-1-6,
   .kyruus footer .grid-5-6 {
     width: 100%;
   }
 }
 
 @media (min-width: 376px) {
-  .kyruus footer .grid-1-6 {
-    width: 100%;
+  .kyruus footer {
+    padding-top: 2.8125rem;
   }
+  .kyruus footer .grid-1-3,
+  .kyruus footer .grid-2-3,
+  .kyruus footer .grid-1-6,
   .kyruus footer .grid-5-6 {
     width: 100%;
   }
 }
 
 @media (min-width: 576px) {
+  .kyruus footer {
+    padding-top: 5.625rem;
+  }
+  .kyruus footer .grid-1-3,
+  .kyruus footer .grid-2-3 {
+    width: 50%;
+  }
   .kyruus footer .grid-1-6 {
     width: 25%;
   }
   .kyruus footer .grid-5-6 {
     width: 75%;
   }
-  .kyruus footer img.logo {
-    width: 101px;
-    height: auto;
+}
+
+@media (min-width: 961px) {
+  .kyruus footer .grid-1-3 {
+    width: 33.333%;
   }
-  .kyruus footer p:first-of-type {
+  .kyruus footer .grid-2-3 {
+    width: 66.666%;
+  }
+  .kyruus footer .grid-1-6 {
+    width: 16.66667%;
+  }
+  .kyruus footer .grid-5-6 {
+    width: 83.33333%;
+  }
+}
+
+.kyruus footer .addr::before {
+  display: block;
+  content: ' ';
+  background-image: url("https://gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/location-sharp.svg");
+  background-size: 20px 20px;
+  opacity: .75;
+  margin-top: .35rem;
+  margin-right: .625rem;
+  height: 20px;
+  width: 20px;
+}
+
+.kyruus footer .phone {
+  margin-bottom: 1.25rem;
+}
+
+.kyruus footer .phone::before {
+  display: block;
+  content: ' ';
+  background-image: url("https://gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/call-sharp.svg");
+  background-size: 20px 20px;
+  opacity: .75;
+  margin-top: .35rem;
+  margin-right: .625rem;
+  height: 20px;
+  width: 20px;
+}
+
+@media (max-width: 375px) {
+  .kyruus footer.d7 .name,
+  .kyruus footer.d7 .footer-bottom .name {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+  .kyruus footer.d7 .addr,
+  .kyruus footer.d7 .phone {
     margin-top: 0;
   }
 }
 
-@media (min-width: 961px) {
-  .kyruus footer {
-    /*
-            .grid-1-6 {
-                width: 16.66667%;
-            }
-            .grid-5-6 {
-                width: 83.33333%;
-            } 
-            */
-  }
-  .kyruus footer .grid__fixed-width {
-    margin: 0 auto;
-    max-width: 1400px;
-    padding: 0 25px;
-    overflow: hidden;
-  }
-  .kyruus footer .location {
+@media (min-width: 376px) {
+  .kyruus footer.d7 .name,
+  .kyruus footer.d7 .footer-bottom .name {
     margin-top: 0;
     margin-bottom: 1.25rem;
   }
-  .kyruus footer .addr,
-  .kyruus footer .phone {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+  .kyruus footer.d7 .addr,
+  .kyruus footer.d7 .phone {
     margin-top: 0;
-    margin-bottom: .625rem;
   }
-  .kyruus footer .addr::before {
-    display: block;
-    content: ' ';
-    background-image: url("https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/location-sharp.svg");
-    background-size: 20px 20px;
-    opacity: .75;
-    margin-top: .35rem;
-    margin-right: .625rem;
-    height: 20px;
-    width: 20px;
+}
+
+@media (max-width: 375px) {
+  .kyruus footer.d8 .name,
+  .kyruus footer.d8 .footer-bottom .name {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
   }
-  .kyruus footer .phone::before {
-    display: block;
-    content: ' ';
-    background-image: url("https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/call-sharp.svg");
-    background-size: 20px 20px;
-    opacity: .75;
-    margin-top: .35rem;
-    margin-right: .625rem;
-    height: 20px;
-    width: 20px;
+}
+
+@media (min-width: 376px) {
+  .kyruus footer.d8 .name,
+  .kyruus footer.d8 .footer-bottom .name {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
   }
-  .kyruus footer ul.main-nav {
+}
+
+.kyruus footer ul.main-nav {
+  margin-top: 0;
+  padding: 0;
+}
+
+.kyruus footer ul.main-nav li {
+  display: block;
+  position: relative;
+  margin: 0 0 .625rem;
+  margin-right: .875rem;
+  padding-right: 1.25rem;
+}
+
+.kyruus footer ul.main-nav li:after {
+  content: '/';
+  display: inline-block;
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ea6b6;
+}
+
+.kyruus footer ul.main-nav li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.kyruus footer ul.main-nav li:last-child:after {
+  display: none;
+}
+
+.kyruus footer li a.facebook {
+  display: block;
+  content: ' ';
+  background-image: url("https://gitcdn.link/cdn/Universal-Health-Services/styles/d1c7692e6ed86c66c5e6b4a4229cdbc905bf4315/latest/assets/facebook.svg");
+  background-size: 32px 32px;
+  opacity: .75;
+  height: 32px;
+  width: 32px;
+}
+
+.kyruus footer li a.facebook span {
+  display: none;
+}
+
+.kyruus footer li a.facebook:hover {
+  opacity: 1;
+}
+
+.kyruus footer li a.instagram {
+  display: block;
+  content: ' ';
+  background-image: url("https://gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/instagram.svg");
+  background-size: 32px 32px;
+  opacity: .75;
+  height: 32px;
+  width: 32px;
+}
+
+.kyruus footer li a.instagram span {
+  display: none;
+}
+
+.kyruus footer li a.instagram:hover {
+  opacity: 1;
+}
+
+.kyruus footer li a.linkedin {
+  display: block;
+  content: ' ';
+  background-image: url("https://gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/linkedin.svg");
+  background-size: 32px 32px;
+  opacity: .75;
+  height: 32px;
+  width: 32px;
+}
+
+.kyruus footer li a.linkedin span {
+  display: none;
+}
+
+.kyruus footer li a.linkedin:hover {
+  opacity: 1;
+}
+
+.kyruus footer li a.twitter {
+  display: block;
+  content: ' ';
+  background-image: url("https://gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/twitter.svg");
+  background-size: 32px 32px;
+  opacity: .75;
+  height: 32px;
+  width: 32px;
+}
+
+.kyruus footer li a.twitter span {
+  display: none;
+}
+
+.kyruus footer li a.twitter:hover {
+  opacity: 1;
+}
+
+.kyruus footer li a.youtube {
+  display: block;
+  content: ' ';
+  background-image: url("https://gitcdn.link/repo/Universal-Health-Services/styles/master/latest/assets/youtube.svg");
+  background-size: 32px 32px;
+  opacity: .75;
+  height: 32px;
+  width: 32px;
+}
+
+.kyruus footer li a.youtube span {
+  display: none;
+}
+
+.kyruus footer li a.youtube:hover {
+  opacity: 1;
+}
+
+@media (max-width: 375px) {
+  .kyruus footer.d7 ul.social {
     padding: 0;
+    margin: .625rem auto .625rem 0;
   }
-  .kyruus footer ul.main-nav li {
+  .kyruus footer.d7 ul.social li {
     display: inline-block;
     position: relative;
-    margin: 0 0 .625rem;
-    margin-right: .875rem;
-    padding-right: 1.25rem;
+    margin: .625rem;
   }
-  .kyruus footer ul.main-nav li:after {
-    content: '/';
-    display: inline-block;
-    position: absolute;
-    right: -2px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #9ea6b6;
-  }
-  .kyruus footer ul.main-nav li:last-child {
-    margin-right: 0;
-    padding-right: 0;
-  }
-  .kyruus footer ul.main-nav li:last-child:after {
-    display: none;
-  }
-  .kyruus footer ul.social {
+}
+
+@media (min-width: 376px) {
+  .kyruus footer.d7 ul.social {
     padding: 0;
-    margin: 35px 0 10px auto;
+    margin: .625rem auto .625rem 0;
   }
-  .kyruus footer ul.social li {
+  .kyruus footer.d7 ul.social li {
     display: inline-block;
     position: relative;
     margin: 0 .625rem;
   }
-  .kyruus footer ul.social li:first-child {
+  .kyruus footer.d7 ul.social li:first-child {
     margin-left: 0;
   }
-  .kyruus footer ul.social li:last-child {
+  .kyruus footer.d7 ul.social li:last-child {
     margin-right: 0;
   }
-  .kyruus footer ul.social li a.facebook {
-    display: block;
-    content: ' ';
-    background-image: url("https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/facebook.svg");
-    background-size: 32px 32px;
-    opacity: .75;
-    height: 32px;
-    width: 32px;
+}
+
+@media (min-width: 576px) {
+  .kyruus footer.d7 ul.social {
+    margin: 1.25rem 0 .625rem auto;
   }
-  .kyruus footer ul.social li a.facebook span {
-    display: none;
+  .kyruus footer.d7 ul.social li {
+    margin: 0 .625rem;
   }
-  .kyruus footer ul.social li a.facebook:hover {
-    opacity: 1;
+}
+
+@media (max-width: 375px) {
+  .kyruus footer.d8 ul.social {
+    padding: 0;
+    margin: .625rem auto .625rem 0;
   }
-  .kyruus footer ul.social li a.instagram {
-    display: block;
-    content: ' ';
-    background-image: url("https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/instagram.svg");
-    background-size: 32px 32px;
-    opacity: .75;
-    height: 32px;
-    width: 32px;
+  .kyruus footer.d8 ul.social li {
+    display: inline-block;
+    position: relative;
+    margin: .625rem;
   }
-  .kyruus footer ul.social li a.instagram span {
-    display: none;
+}
+
+@media (min-width: 376px) {
+  .kyruus footer.d8 ul.social {
+    padding: 0;
+    margin: .625rem auto .625rem 0;
   }
-  .kyruus footer ul.social li a.instagram:hover {
-    opacity: 1;
+  .kyruus footer.d8 ul.social li {
+    display: inline-block;
+    position: relative;
+    margin: 0 .625rem;
   }
-  .kyruus footer ul.social li a.twitter {
-    display: block;
-    content: ' ';
-    background-image: url("https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/twitter.svg");
-    background-size: 32px 32px;
-    opacity: .75;
-    height: 32px;
-    width: 32px;
+  .kyruus footer.d8 ul.social li:first-child {
+    margin-left: 0;
   }
-  .kyruus footer ul.social li a.twitter span {
-    display: none;
+  .kyruus footer.d8 ul.social li:last-child {
+    margin-right: 0;
   }
-  .kyruus footer ul.social li a.twitter:hover {
-    opacity: 1;
+}
+
+@media (min-width: 576px) {
+  .kyruus footer.d8 ul.social {
+    margin: 0 0 .625rem auto;
   }
-  .kyruus footer ul.social li a.linkedin {
-    display: block;
-    content: ' ';
-    background-image: url("https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/linkedin.svg");
-    background-size: 32px 32px;
-    opacity: .75;
-    height: 32px;
-    width: 32px;
+  .kyruus footer.d8 ul.social li {
+    margin: 0 .625rem;
   }
-  .kyruus footer ul.social li a.linkedin span {
-    display: none;
+}
+
+@media (max-width: 375px) {
+  .kyruus footer.d7 .footer-bottom,
+  .kyruus footer.d8 .footer-bottom {
+    padding: 2.187rem 0;
+    margin-top: 3.125rem;
   }
-  .kyruus footer ul.social li a.linkedin:hover {
-    opacity: 1;
+}
+
+@media (min-width: 376px) {
+  .kyruus footer.d7 .footer-bottom,
+  .kyruus footer.d8 .footer-bottom {
+    padding: 2.187rem 0;
+    margin-top: 3.125rem;
   }
-  .kyruus footer ul.social li a.youtube {
-    display: block;
-    content: ' ';
-    background-image: url("https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/youtube.svg");
-    background-size: 32px 32px;
-    opacity: .75;
-    height: 32px;
-    width: 32px;
-  }
-  .kyruus footer ul.social li a.youtube span {
-    display: none;
-  }
-  .kyruus footer ul.social li a.youtube:hover {
-    opacity: 1;
-  }
-  .kyruus footer .footer-bottom {
+}
+
+@media (min-width: 576px) {
+  .kyruus footer.d7 .footer-bottom,
+  .kyruus footer.d8 .footer-bottom {
     padding: 4.375rem 0;
+    margin-top: 3.125rem;
   }
-  .kyruus footer .footer-bottom p {
+}
+
+@media (max-width: 375px) {
+  .kyruus footer.d7 .footer-bottom p {
     margin: 0 0 1.25rem;
   }
-  .kyruus footer .footer-bottom p.copyright {
+  .kyruus footer.d7 .footer-bottom p.copyright {
     margin: 0 0 .625rem;
   }
-  .kyruus footer .footer-bottom ul.legal {
+}
+
+@media (min-width: 376px) {
+  .kyruus footer.d7 .footer-bottom p {
+    margin: 0 0 1.25rem;
+  }
+  .kyruus footer.d7 .footer-bottom p.copyright {
+    margin: 0 0 .625rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .kyruus footer.d7 .footer-bottom p {
+    margin: 0 0 1.25rem;
+  }
+  .kyruus footer.d7 .footer-bottom p.copyright {
+    margin: 0 0 .625rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .kyruus footer.d8 .footer-bottom p {
+    margin: 0 0 .625rem;
+  }
+  .kyruus footer.d8 .footer-bottom p.copyright {
+    margin: 0 0 .625rem;
+  }
+}
+
+@media (min-width: 376px) {
+  .kyruus footer.d8 .footer-bottom p {
+    margin: 0 0 .625rem;
+  }
+  .kyruus footer.d8 .footer-bottom p.copyright {
+    margin: 0 0 .625rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .kyruus footer.d7 .footer-bottom ul.legal {
     padding: 0;
   }
-  .kyruus footer .footer-bottom ul.legal li {
+  .kyruus footer.d7 .footer-bottom ul.legal li {
     display: inline-block;
     margin-right: .5rem;
     padding-right: .625rem;
     position: relative;
   }
-  .kyruus footer .footer-bottom ul.legal li:after {
+  .kyruus footer.d7 .footer-bottom ul.legal li:after {
     content: '|';
     display: inline-block;
     position: absolute;
     right: -2px;
     top: 1px;
   }
-  .kyruus footer .footer-bottom ul.legal li:last-child:after {
+  .kyruus footer.d7 .footer-bottom ul.legal li:last-child:after {
     display: none;
   }
-  .kyruus footer .footer-bottom .logo {
+}
+
+@media (min-width: 376px) {
+  .kyruus footer.d7 .footer-bottom ul.legal {
+    padding: 0;
+  }
+  .kyruus footer.d7 .footer-bottom ul.legal li {
+    display: inline-block;
+    margin-right: .5rem;
+    padding-right: .625rem;
+    position: relative;
+  }
+  .kyruus footer.d7 .footer-bottom ul.legal li:after {
+    content: '|';
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    top: 1px;
+  }
+  .kyruus footer.d7 .footer-bottom ul.legal li:last-child:after {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .kyruus footer.d8 .footer-bottom ul.legal {
+    padding: 0;
+    margin-bottom: .25rem;
+  }
+  .kyruus footer.d8 .footer-bottom ul.legal li {
+    display: inline-block;
+    margin-right: .25rem;
+    padding-right: .5rem;
+    position: relative;
+  }
+  .kyruus footer.d8 .footer-bottom ul.legal li:after {
+    content: '/';
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    top: 1px;
+  }
+  .kyruus footer.d8 .footer-bottom ul.legal li:last-child:after {
+    display: none;
+  }
+}
+
+@media (min-width: 376px) {
+  .kyruus footer.d8 .footer-bottom ul.legal {
+    padding: 0;
+    margin-bottom: .25rem;
+  }
+  .kyruus footer.d8 .footer-bottom ul.legal li {
+    display: inline-block;
+    margin-right: .25rem;
+    padding-right: .5rem;
+    position: relative;
+  }
+  .kyruus footer.d8 .footer-bottom ul.legal li:after {
+    content: '/';
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    top: 1px;
+  }
+  .kyruus footer.d8 .footer-bottom ul.legal li:last-child:after {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .kyruus footer.d7 .footer-bottom .uhs-logo {
+    display: block;
+    content: ' ';
+    background-image: url("https://gitcdn.link/cdn/Universal-Health-Services/styles/d1c7692e6ed86c66c5e6b4a4229cdbc905bf4315/latest/assets/UHS-logo_white.svg");
+    background-size: 90px 40px;
+    opacity: .6;
+    height: 40px;
+    width: 90px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 376px) {
+  .kyruus footer.d7 .footer-bottom .uhs-logo {
     display: block;
     content: ' ';
     background-image: url("https://raw.githubusercontent.com/Universal-Health-Services/styles/master/latest/assets/UHS-logo_white.svg");
@@ -351,7 +670,38 @@
     opacity: .6;
     height: 40px;
     width: 90px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 961px) {
+  .kyruus footer.d7 .footer-bottom .uhs-logo {
     margin-right: 0;
     margin-left: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .kyruus footer.d8 .footer-bottom .logo img {
+    margin: 0 auto 1.25rem 0;
+    height: auto;
+    width: 200px;
+  }
+}
+
+@media (min-width: 376px) {
+  .kyruus footer.d8 .footer-bottom .logo img {
+    margin: 0 auto 1.25rem 0;
+    height: auto;
+    width: 300px;
+  }
+}
+
+@media (min-width: 576px) {
+  .kyruus footer.d8 .footer-bottom .logo img {
+    margin: 0 0 auto auto;
+    height: auto;
+    width: 300px;
   }
 }
