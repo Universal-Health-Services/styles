@@ -266,8 +266,9 @@
                 display: none;
             }
         }
-        //@include respond-to('XS') { }
-        //@include respond-to('SM') { }
+    }
+    footer.d7 ul.main-nav {
+        margin: 0 0 .625rem auto;
     }
 
     // Footer - Social Icons
